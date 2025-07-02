@@ -1,0 +1,30 @@
+[
+    {
+  "box_id": "GREENBOX_01",
+  "dimensions": [34, 20.5, 12.5],
+  "material": "Recycled Rigid Cardboard",
+  "co2_saved": 0.5,
+  "cost_saved": 2.8
+},
+{
+  "box_id": "GREENBOX_02",
+  "dimensions": [19.5, 19.5, 10],
+  "material": "Recycled Kraft Paperboard",
+  "co2_saved": 0.4,
+  "cost_saved": 2.2
+},
+{
+  "box_id": "GREENPOUCH_01",
+  "dimensions": [35, 25, 4],
+  "material": "Recycled Kraft Paper Mailer",
+  "co2_saved": 0.7,
+  "cost_saved": 3.0
+},
+{
+  "box_id": "GREENBOX_03",
+  "dimensions": [12, 10, 4],
+  "material": "Recycled Rigid Paperboard",
+  "co2_saved": 0.3,
+  "cost_saved": 1.8
+}
+]
