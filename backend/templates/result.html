@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suggested Box</title>
+</head>
+<body>
+  <h2>Suggested Packaging</h2>
+  {% if suggestion %}
+    <ul>
+      <li><strong>Box ID:</strong> {{ suggestion.box_id }}</li>
+      <li><strong>Dimensions:</strong> {{ suggestion.dimensions }}</li>
+      <li><strong>Material:</strong> {{ suggestion.material }}</li>
+      <li><strong>CO₂ Saved:</strong> {{ suggestion.co2_saved }} kg</li>
+      <li><strong>Cost Saved:</strong> ₹{{ suggestion.cost_saved }}</li>
+    </ul>
+  {% else %}
+    <p>No suitable box found. Using default packaging.</p>
+  {% endif %}
+  <a href="/">Try Again</a>
+</body>
+</html>
