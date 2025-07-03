@@ -9,12 +9,20 @@ def index():
 
 @app.route('/suggest', methods=['POST'])
 def suggest():
-    length = float(request.form['length'])
-    width = float(request.form['width'])
-    height = float(request.form['height'])
+    try:
+        length = float(request.form['length'])
+        width = float(request.form['width'])
+        height = float(request.form['height'])
 
-    suggestion = suggest_box(length, width, height)
-    return render_template('result.html', suggestion=suggestion)
+        if length <= 0 or width <= 0 or height <= 0:
+            return "❌ Invalid dimensions. All values must be greater than 0.", 400
+
+        suggestion = suggest_box(length, width, height)
+        return render_template('result.html', suggestion=suggestion)
+
+    except Exception as e:
+        return f"❌ Error: {str(e)}", 500
+
 
 # Your existing /suggest_box POST API stays here
 @app.route('/suggest_box', methods=['POST'])
