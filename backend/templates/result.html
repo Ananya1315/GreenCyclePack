@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Suggested Box</title>
+  <meta charset="UTF-8">
+  <title>Suggested Packaging</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2, h3 {
+      color: #2E8B57;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    img {
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      background: #f9f9f9;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #0066cc;
+    }
+  </style>
 </head>
 <body>
+
   <h2>Suggested Packaging</h2>
+
   {% if suggestion %}
     <ul>
       <li><strong>Box ID:</strong> {{ suggestion.box_id }}</li>
@@ -16,6 +47,13 @@
   {% else %}
     <p>No suitable box found. Using default packaging.</p>
   {% endif %}
-  <a href="/">Try Again</a>
+
+  {% if qr_image %}
+    <h3>Scan to view packaging details:</h3>
+    <img src="{{ qr_image }}" alt="QR Code" width="200">
+  {% endif %}
+
+  <br><a href="/">🔁 Try Again</a>
+
 </body>
 </html>
